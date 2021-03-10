@@ -1,0 +1,105 @@
+.dark-mode {
+	background-color: white;
+	color: black;
+}
+
+a {
+	color: white;
+}
+
+.font-semibold {
+	font-weight: 600;
+}
+
+.dark-mode a {
+	color: black;
+}
+
+.dark-mode .nav-pills > li.active > a {
+	color: #000;
+}
+
+.dark-mode .wallet button.btn {
+	background: #c5c5c5;
+}
+
+.dark-mode .wallet button.btn:hover {
+	background: #fbfbfb;
+	color: #000;
+}
+
+section.branding {
+	padding: 10px;
+}
+
+.branding h4 {
+	margin: 0;
+}
+
+.logo {
+	padding: 0;
+	text-align: right;
+}
+
+.site-name {
+	padding: 0 10px;
+}
+
+.nav-pills {
+	border: 0px;
+}
+
+.nav-pills > li > a {
+	font-size: 16px;
+	font-weight: 100;
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:focus,
+.nav-pills > li.active > a:hover {
+	border: 0;
+	background: transparent;
+	color: #fff;
+}
+
+.nav-pills > li > a:hover,
+.nav-pills > li.active > a {
+	color: #fff;
+}
+.nav-pills > li > a:hover {
+	text-decoration: underline;
+}
+.nav-pills > li.active > a,
+.nav-pills > li > a:hover {
+	background: transparent;
+	border: 0;
+	margin: 0;
+}
+.logo img {
+	width: 80%;
+}
+
+.cursor-pointer {
+	padding: 0px 10px;
+	font-size: 22px;
+	text-align: right;
+}
+
+section.toggle-theme {
+	padding: 10px;
+}
+
+@media (min-width: 1200px) {
+	.container {
+		width: 956px;
+	}
+}
+
+.wallet button.btn {
+	background: #1f2937;
+}
+
+.wallet button.btn:hover {
+	background: #253346;
+	color: #fff;
+}
