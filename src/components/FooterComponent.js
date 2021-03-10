@@ -5,7 +5,7 @@ function FooterCompo() {
     return (
       
         <footer>
-            <div class="container main">
+            <div className="container main">
                 <ul>
                     <li><a href="https://beta.autofarm.network/audit_vidar_autofarm_v2.pdf" target="_blank">Audit</a></li>
                     <li><a href="https://github.com/autofarm-network/autofarmV2" target="_blank">Github</a></li>

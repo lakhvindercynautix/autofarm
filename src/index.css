@@ -211,7 +211,11 @@ span.rounded {
 .value span {
 	font-size: 16px;
 }
-i.fa.fa-angle-down {
+.fa-angle-down {
+	font-size: 30px;
+	color: #fff;
+}
+.fa-angle-up {
 	font-size: 30px;
 	color: #fff;
 }
