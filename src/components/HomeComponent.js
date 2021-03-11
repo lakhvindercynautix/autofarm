@@ -1,6 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 import SectionComponent from './SectionComponent'
+import WarningComponent from './WarningComponent'
 
 function Home() {
     const datas=[
@@ -46,8 +47,12 @@ function Home() {
         }
 ]
 let itemList=datas.map((item,index)=>{
-    return <SectionComponent item={item} />
+    return <SectionComponent item={item} key={index}/>
   })
+  
+  const [show,setShow] = React.useState(false);
+  const turboEl ='turbo';
+ 
     return (
         <section>
         <div className="container main">
@@ -59,7 +64,7 @@ let itemList=datas.map((item,index)=>{
                                 <h2 className="col-md-12 font-semibold "> TVL $957,026,390</h2>
                                 <h4 className="col-md-12">BSC TVL $938,281,372</h4>
                                 <h4 className="col-md-12">AUTO $2,247.09</h4>
-                                <button className="btn buy-auto" onclick="buy_auto()">Buy
+                                <button className="btn buy-auto" >Buy
                                     AUTO</button>
                             </div>
                             <div className="total col-md-6">
@@ -91,22 +96,22 @@ let itemList=datas.map((item,index)=>{
                                 <li><a data-toggle="tab" href="#Swap">HECO</a></li>
                             </ul>
                             <label className="switch">
-                                <input type="checkbox" id="turbo" onclick="onTurbo()" />
+                                <input type="checkbox" id="turbo" onClick={()=>setShow(!show)} />
                                 <span className="slider round"></span>
                             </label>
-                            <span id="turboEl">TURBO</span>
+                            <span id="turboEl" className={show?turboEl:null}>TURBO</span>
                         </section>
                         <section className="filters col-md-12">
                             <h5>FARM</h5>
                             <ul className="nav nav-pills">
-                                <li className="active"><a data-toggle="tab" href="#">All</a></li>
-                                <li><a data-toggle="tab" href="#">AUTO</a></li>
-                                <li><a data-toggle="tab" href="#">Venus</a></li>
-                                <li><a data-toggle="tab" href="#">HECO</a></li>
-                                <li><a data-toggle="tab" href="#">BSC</a></li>
-                                <li><a data-toggle="tab" href="#">Goose</a></li>
-                                <li><a data-toggle="tab" href="#">bDollar</a></li>
-                                <li><a data-toggle="tab" href="#">Viking</a></li>
+                                <li className="active"><a data-toggle="tab" href="/">All</a></li>
+                                <li><a data-toggle="tab" href="/">AUTO</a></li>
+                                <li><a data-toggle="tab" href="/">Venus</a></li>
+                                <li><a data-toggle="tab" href="/">HECO</a></li>
+                                <li><a data-toggle="tab" href="/">BSC</a></li>
+                                <li><a data-toggle="tab" href="/">Goose</a></li>
+                                <li><a data-toggle="tab" href="/">bDollar</a></li>
+                                <li><a data-toggle="tab" href="/">Viking</a></li>
                             </ul>
                         </section>
                         <section className="stacked-only col-md-12">
@@ -117,15 +122,9 @@ let itemList=datas.map((item,index)=>{
                                 </button>
                             </div>
                         </section>
-                        <section className="warning turbo col-md-12" id="warning">
-                            <div className="warning-cont">
-                                <div className="warning-title"> WARNING </div>
-                                <div> These farms have NOT been reviewed by the autofarm&nbsp;team. <br /> <b>DYOR</b>,
-                                    use
-                                    at your own risk.
-                                </div>
-                            </div>
-                        </section>
+                        {show?<WarningComponent/>:null}
+                        
+                        
                         <section className="content col-md-12">
                             <div className="grid">
                                 <div className="grid-item col-md-8">

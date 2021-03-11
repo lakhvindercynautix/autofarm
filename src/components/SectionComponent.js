@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee,faAngleDown,faAngleUp } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown,faAngleUp } from '@fortawesome/free-solid-svg-icons'
 import ToggleComponent from './ToggleComponent'
 
 function SectionCompo(props) {
@@ -16,9 +16,9 @@ function SectionCompo(props) {
                                 <div className="grid-item  col-md-8">
                                     <div className="stock-img col-md-2">
                                         <img src="https://assets.coingecko.com/coins/images/14072/small/2_%282%29.png?1614151730"
-                                            className="w-6 h-6 sm:w-8 sm:h-8" />
+                                            alt="" className="w-6 h-6 sm:w-8 sm:h-8" />
                                         <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/binance/info/logo.png"
-                                            className="w-6 h-6 sm:w-8 sm:h-8" style={{marginLeft: "-0.75rem"}} />
+                                           alt="" className="w-6 h-6 sm:w-8 sm:h-8" style={{marginLeft: "-0.75rem"}} />
                                             
                                     </div>
                                     <div className="col-md-8 stock-detail">

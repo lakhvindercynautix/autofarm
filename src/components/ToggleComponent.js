@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 
 
 function ToggleCompo(){
@@ -16,7 +16,7 @@ function ToggleCompo(){
                                     <div className="input-box1">
                                         <input className="form-control form-control-lg" type="text" placeholder="0" />
                                     </div>
-                                    <div className="max-btn"><a href="#">MAX</a></div> 
+                                    <div className="max-btn"><a href="/">MAX</a></div> 
                                     <button className="btn-1">Deposit</button>
                                 </div>
                             </div>
@@ -32,7 +32,7 @@ function ToggleCompo(){
                                         <input className="form-control form-control-lg" type="text" placeholder="0" />
                                     </div>
                                     <div className="max-text">
-                                    <div className="max-btn"><a href="#">MAX</a></div> 
+                                    <div className="max-btn"><a href="/">MAX</a></div> 
                                     </div>
                                     <button className="btn">Withdraw</button>
                                 </div>
@@ -53,13 +53,13 @@ function ToggleCompo(){
                         <div className="first-box col-md-12 showtogle" >
                             <div className="first col-md-4">
                              <h6><b>Vault Details</b></h6>
-                             <h6 className="text">Asset: <a href="#">WBNB-AUTO LP</a></h6>
+                             <h6 className="text">Asset: <a href="/">WBNB-AUTO LP</a></h6>
                              <h6 className="text-1">($1,894.39)</h6>
                              <h6>AUTO multiplier: 11.50x</h6>
                              <h6>Type: staking</h6>
                              <h6>Farm name: AUTO</h6>
-                             <h6 className="text-2">Farm contract:  <a href="#">view</a></h6>
-                             <h6 className="tex-3">Vault contract: <a href="#">view</a></h6>
+                             <h6 className="text-2">Farm contract:  <a href="/">view</a></h6>
+                             <h6 className="tex-3">Vault contract: <a href="/">view</a></h6>
                             </div> 
                             <div className="second col-md-3">
                             <h6><b>APY Calculations</b></h6>

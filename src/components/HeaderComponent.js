@@ -1,18 +1,33 @@
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import logo from '../logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMoon } from '@fortawesome/free-solid-svg-icons'
 //import './css/Header.css';
 
 
+
 function HeaderCompo() {
+    const [show,setShow] = React.useState(false);
+  
+    if(show){
+        document.body.classList.add('dark-mode');
+        
+    }else{
+        document.body.classList.remove('dark-mode');
+        
+    }
+    
+
     return (
       
        <header>
         <div className="container">
             <section className="branding col-md-4 p-2">
                 <div className="col-md-2 logo">
-                    <img src={logo} alt="" width="100%" />
+                <Link to={'/'}> <img src={logo} alt="" width="100%" /> </Link>  
                 </div>
                 <div className="col-md-10 site-name">
                     <h4>autofarm</h4>
@@ -22,19 +37,20 @@ function HeaderCompo() {
             <section className="tabs-nav col-md-4">
                 <ul className="nav nav-pills">
                     <li className="active"><a data-toggle="tab" href="#Vaults">Vaults</a></li>
-                    <li><a data-toggle="tab" href="#Swap">Swap</a></li>
-                    <li><a href="https://legacy.autofarm.network/" target="_blank">Legacy</a></li>
+                    <li><Link to={'/swap'}> Swap </Link></li>
+                    <li><a href="https://legacy.autofarm.network/" rel="noreferrer" target="_blank">Legacy</a></li>
                 </ul>
             </section>
             <section className="toggle-theme col-md-4">
-                <div className="cursor-pointer col-md-6" onclick="switchTheme()">
+                <div className="cursor-pointer col-md-6" onClick={()=>setShow(!show)}>
+                    <FontAwesomeIcon icon={faMoon}/>
                     <i className="fa fa-moon-o" aria-hidden="true"></i>
                 </div>
                 <div className="wallet col-md-6">
                     <button className="btn" data-toggle="modal" data-target="#walletModal">Connect Wallet</button>
                 </div>
                
-                <div className="modal fade" id="walletModal" tabindex="-1" role="dialog" aria-labelledby="walletModal"
+                <div className="modal fade" id="walletModal" tabIndex="-1" role="dialog" aria-labelledby="walletModal"
                     aria-hidden="true">
                     <div className="modal-dialog" role="document">
                         <div className="modal-content">

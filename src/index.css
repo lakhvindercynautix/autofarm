@@ -346,7 +346,7 @@ span#turboEl {
 	padding: 5px;
 }
 .warning {
-	display: none;
+	display: block;
 }
 /* SLIDER CSS ENDS */
 /* form css*/
